@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ViD7a3fvF6PKQVK0vzhEBxAQcFd/CfZxNca5idupytQkam45Y5+UeWyuw3y1hSQb3Lg0PzQNHD9sFR6ktciGtQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\NLW#6\\ProjetoOfertas\\Ofertas.Comum\\Ofertas.Comum.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Felipe\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
+    "C:\\Users\\Felipe\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
