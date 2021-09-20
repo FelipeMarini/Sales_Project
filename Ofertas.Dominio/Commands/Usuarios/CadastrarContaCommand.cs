@@ -3,7 +3,7 @@ using Flunt.Validations;
 using Ofertas.Comum;
 using Ofertas.Comum.Commands;
 
-namespace Ofertas.Dominio.Commands.Usuario
+namespace Ofertas.Dominio.Commands.Usuarios
 {
     public class CadastrarContaCommand : Notifiable<Notification>, ICommand
     {

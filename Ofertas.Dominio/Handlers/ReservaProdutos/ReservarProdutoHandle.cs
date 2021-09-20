@@ -1,6 +1,6 @@
 ﻿
 
-namespace Ofertas.Dominio.Handlers.ReservaProduto
+namespace Ofertas.Dominio.Handlers.ReservaProdutos
 {
     class ReservarProdutoHandle
     {

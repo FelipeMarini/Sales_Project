@@ -1,9 +1,11 @@
 ﻿using Flunt.Notifications;
 using Ofertas.Comum.Commands;
 using Ofertas.Comum.Handlers.Contracts;
+using Ofertas.Dominio.Commands.Produtos;
+using Ofertas.Dominio.Entidades;
 using Ofertas.Dominio.Repositories;
 
-namespace Ofertas.Dominio.Handlers.Produto
+namespace Ofertas.Dominio.Handlers.Produtos
 {
     public class CadastrarProdutoHandle : Notifiable<Notification>, IHandlerCommand<CadastrarProdutoCommand>
     {

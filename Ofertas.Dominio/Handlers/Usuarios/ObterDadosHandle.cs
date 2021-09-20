@@ -1,6 +1,6 @@
 ﻿
 
-namespace Ofertas.Dominio.Handlers.Usuario
+namespace Ofertas.Dominio.Handlers.Usuarios
 {
     class ObterDadosHandle
     {

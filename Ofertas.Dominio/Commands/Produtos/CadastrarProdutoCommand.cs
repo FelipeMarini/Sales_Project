@@ -3,7 +3,7 @@ using Flunt.Validations;
 using Ofertas.Comum.Commands;
 using Ofertas.Comum.Enum;
 
-namespace Ofertas.Dominio.Commands.Produto
+namespace Ofertas.Dominio.Commands.Produtos
 {
     public class CadastrarProdutoCommand : Notifiable<Notification>, ICommand
     {

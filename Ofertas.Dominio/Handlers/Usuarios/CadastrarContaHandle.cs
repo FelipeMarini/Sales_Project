@@ -2,7 +2,7 @@
 using Ofertas.Comum.Commands;
 using Ofertas.Comum.Handlers.Contracts;
 using Ofertas.Comum.Utils;
-using Ofertas.Dominio.Commands.Usuario;
+using Ofertas.Dominio.Commands.Usuarios;
 using Ofertas.Dominio.Repositories;
 
 namespace Ofertas.Dominio.Handlers.Users

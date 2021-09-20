@@ -1,5 +1,5 @@
 ﻿
-namespace Ofertas.Dominio.Handlers.Produto
+namespace Ofertas.Dominio.Handlers.Produtos
 {
     class AlterarStatusHandle
     {

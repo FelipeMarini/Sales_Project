@@ -3,13 +3,13 @@ using Flunt.Validations;
 using Ofertas.Comum.Commands;
 using Ofertas.Comum.Enum;
 
-namespace Ofertas.Dominio.Commands.Produto
+namespace Ofertas.Dominio.Commands.Produtos
 {
-    public class ExcluirProdutoCommand : Notifiable<Notification>, ICommand
+    public class AlterarProdutoCommand : Notifiable<Notification>, ICommand
     {
-       
+        
 
-        public ExcluirProdutoCommand(string titulo, string imagem, string descricao, EnStatusProduto status, bool tipo, int quantidade)
+        public AlterarProdutoCommand(string titulo, string imagem, string descricao, EnStatusProduto status, bool tipo, int quantidade)
         {
             Titulo = titulo;
             Imagem = imagem;
@@ -19,6 +19,7 @@ namespace Ofertas.Dominio.Commands.Produto
             Quantidade = quantidade;
         }
 
+        
         public string Titulo { get; set; }
 
         public string Imagem { get; set; }
@@ -47,7 +48,7 @@ namespace Ofertas.Dominio.Commands.Produto
             );
 
         }
-
     
+        
     }
 }

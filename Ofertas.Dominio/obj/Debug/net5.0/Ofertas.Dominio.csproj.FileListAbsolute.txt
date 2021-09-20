@@ -13,3 +13,18 @@ C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#6\ProjetoOfertas\Ofertas.Dominio\
 C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#6\ProjetoOfertas\Ofertas.Dominio\obj\Debug\net5.0\Ofertas.Dominio.dll
 C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#6\ProjetoOfertas\Ofertas.Dominio\obj\Debug\net5.0\ref\Ofertas.Dominio.dll
 C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#6\ProjetoOfertas\Ofertas.Dominio\obj\Debug\net5.0\Ofertas.Dominio.pdb
+C:\Users\User\Desktop\Nova pasta\Sales_Project\Ofertas.Dominio\obj\Debug\net5.0\Ofertas.Dominio.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Nova pasta\Sales_Project\Ofertas.Dominio\obj\Debug\net5.0\Ofertas.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Nova pasta\Sales_Project\Ofertas.Dominio\obj\Debug\net5.0\Ofertas.Dominio.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Nova pasta\Sales_Project\Ofertas.Dominio\obj\Debug\net5.0\Ofertas.Dominio.AssemblyInfo.cs
+C:\Users\User\Desktop\Nova pasta\Sales_Project\Ofertas.Dominio\obj\Debug\net5.0\Ofertas.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Nova pasta\Sales_Project\Ofertas.Dominio\obj\Debug\net5.0\Ofertas.Dominio.dll
+C:\Users\User\Desktop\Nova pasta\Sales_Project\Ofertas.Dominio\obj\Debug\net5.0\ref\Ofertas.Dominio.dll
+C:\Users\User\Desktop\Nova pasta\Sales_Project\Ofertas.Dominio\obj\Debug\net5.0\Ofertas.Dominio.pdb
+C:\Users\User\Desktop\Nova pasta\Sales_Project\Ofertas.Dominio\bin\Debug\net5.0\Ofertas.Dominio.deps.json
+C:\Users\User\Desktop\Nova pasta\Sales_Project\Ofertas.Dominio\bin\Debug\net5.0\Ofertas.Dominio.dll
+C:\Users\User\Desktop\Nova pasta\Sales_Project\Ofertas.Dominio\bin\Debug\net5.0\ref\Ofertas.Dominio.dll
+C:\Users\User\Desktop\Nova pasta\Sales_Project\Ofertas.Dominio\bin\Debug\net5.0\Ofertas.Dominio.pdb
+C:\Users\User\Desktop\Nova pasta\Sales_Project\Ofertas.Dominio\bin\Debug\net5.0\Ofertas.Comum.dll
+C:\Users\User\Desktop\Nova pasta\Sales_Project\Ofertas.Dominio\bin\Debug\net5.0\Ofertas.Comum.pdb
+C:\Users\User\Desktop\Nova pasta\Sales_Project\Ofertas.Dominio\obj\Debug\net5.0\Ofertas.Dominio.csproj.CopyComplete

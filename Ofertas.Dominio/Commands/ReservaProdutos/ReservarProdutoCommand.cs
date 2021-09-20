@@ -2,7 +2,7 @@
 using Flunt.Validations;
 using Ofertas.Comum.Commands;
 
-namespace Ofertas.Dominio.Commands.ReservaProduto
+namespace Ofertas.Dominio.Commands.ReservaProdutos
 {
     public class ReservarProdutoCommand : Notifiable<Notification>, ICommand
     {
