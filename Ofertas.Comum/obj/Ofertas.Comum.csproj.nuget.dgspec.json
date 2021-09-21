@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Nova pasta\\Sales_Project\\Ofertas.Comum\\Ofertas.Comum.csproj": {}
+    "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Comum\\Ofertas.Comum.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Nova pasta\\Sales_Project\\Ofertas.Comum\\Ofertas.Comum.csproj": {
+    "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Comum\\Ofertas.Comum.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Nova pasta\\Sales_Project\\Ofertas.Comum\\Ofertas.Comum.csproj",
+        "projectUniqueName": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Comum\\Ofertas.Comum.csproj",
         "projectName": "Ofertas.Comum",
-        "projectPath": "C:\\Users\\User\\Desktop\\Nova pasta\\Sales_Project\\Ofertas.Comum\\Ofertas.Comum.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Nova pasta\\Sales_Project\\Ofertas.Comum\\obj\\",
+        "projectPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Comum\\Ofertas.Comum.csproj",
+        "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Comum\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -64,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

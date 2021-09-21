@@ -5,20 +5,19 @@ using Ofertas.Comum.Utils;
 using Ofertas.Dominio.Commands.Usuarios;
 using Ofertas.Dominio.Repositories;
 
-namespace Ofertas.Dominio.Handlers.Users
-
+namespace Ofertas.Dominio.Handlers.Usuarios
 
 {
     public class CadastrarContaHandle : Notifiable<Notification>, IHandlerCommand<CadastrarContaCommand>
     {
 
-        private readonly IUsuarioRepositorio _usuarioRepositorio;
+        private readonly IUsuarioRepositorio usuarioRepositorio;
 
         
         // injeção de dependência para garantir que haja instância do repositório de usuário com os métodos
-        public CadastrarContaHandle(IUsuarioRepositorio usuarioRepositorio)
+        public CadastrarContaHandle(IUsuarioRepositorio _usuarioRepositorio)
         {
-            _usuarioRepositorio = usuarioRepositorio;
+            usuarioRepositorio = _usuarioRepositorio;
         }
 
         
@@ -36,7 +35,7 @@ namespace Ofertas.Dominio.Handlers.Users
                     );
             }
 
-            var userExiste = _usuarioRepositorio.BuscarUsuarioPorEmail(command.Email);
+            var userExiste = usuarioRepositorio.BuscarUsuarioPorEmail(command.Email);
 
             if (userExiste != null)
             {
@@ -46,12 +45,18 @@ namespace Ofertas.Dominio.Handlers.Users
 
             command.Senha = Senha.Criptografar(command.Senha);
 
-            //Usuario u1 = new Usuario(command.Nome, command.Email, command.Senha, command.TipoUsuario);
+            Usuario user = new Usuario(command.Nome, command.Email, command.Senha, command.TipoUsuario);
+
+            if (!user.IsValid)
+            {
+                return new GenericCommandResult(false,"Dados do usuário inválidos",user.Notifications);
+            }
 
 
+            usuarioRepositorio.CadastrarUsuario(user);
 
 
-            return new GenericCommandResult(true,"Usuário criado com sucesso","Token");
+            return new GenericCommandResult(true,"Usuário cadastrado com sucesso","Sucesso");
 
 
         }

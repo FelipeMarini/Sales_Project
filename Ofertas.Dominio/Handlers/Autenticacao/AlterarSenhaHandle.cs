@@ -9,11 +9,11 @@ namespace Ofertas.Dominio.Handlers.Autenticacao
     public class AlterarSenhaHandle : Notifiable<Notification>, IHandlerCommand<AlterarSenhaCommand>
     {
 
-        private readonly IUsuarioRepositorio _usuarioRepositorio;
+        private readonly IUsuarioRepositorio usuarioRepositorio;
 
-        public AlterarSenhaHandle(IUsuarioRepositorio usuarioRepositorio)
+        public AlterarSenhaHandle(IUsuarioRepositorio _usuarioRepositorio)
         {
-            _usuarioRepositorio = usuarioRepositorio;
+            usuarioRepositorio = _usuarioRepositorio;
         }
 
         public ICommandResult Handler(AlterarSenhaCommand command)
@@ -26,16 +26,13 @@ namespace Ofertas.Dominio.Handlers.Autenticacao
                 return new GenericCommandResult(false,"Dados de usuário informados corretamente",command.Notifications);
             }
 
-            var usuario = _usuarioRepositorio.BuscarUsuarioPorEmail(command.Email);
+            var usuario = usuarioRepositorio.BuscarUsuarioPorEmail(command.Email);
 
             // verifica se a nova senha continua igual a anterior também?
             if (usuario == null || command.Senha == usuario.Senha)
             {
                 return new GenericCommandResult(false,"Dados Inválidos",null);
             }
-
-
-            
 
 
             return new GenericCommandResult(true,"Senha alterada com sucesso",usuario);

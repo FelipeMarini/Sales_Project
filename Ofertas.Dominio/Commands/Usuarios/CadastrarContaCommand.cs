@@ -33,10 +33,11 @@ namespace Ofertas.Dominio.Commands.Usuarios
             AddNotifications(
                 new Contract<Notification>()
                     .Requires()
-                    .IsNotEmpty(Nome,"Nome","O nome não pode ser vazio")
-                    .IsEmail(Email,"Email","O formato de email está incorreto")
-                    .IsGreaterThan(Senha,7,"Senha","A senha precisa ter no mínimo 8 caracteres")
-            );
+                    .IsNotEmpty(Nome, "Nome", "O nome não pode ser vazio")
+                    .IsEmail(Email, "Email", "O formato de email está incorreto")
+                    .IsGreaterThan(Senha, 7, "Senha", "A senha precisa ter no mínimo 8 caracteres")
+                    .IsNotNull(TipoUsuario,"Tipo de Usuário","Tipo de usuário não pode ser nulo")
+            ); ;
         }
     
     }

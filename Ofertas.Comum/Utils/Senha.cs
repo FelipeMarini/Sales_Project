@@ -16,13 +16,9 @@ namespace Ofertas.Comum.Utils
         public static bool ValidarHash(string senha, string hash)
         {
 
-            return BCrypt.Net.BCrypt.Verify(senha,hash);
+            return BCrypt.Net.BCrypt.Verify(senha, hash);
 
         }
-
-
-
-
 
 
     }

@@ -1,6 +1,7 @@
 ﻿using Ofertas.Comum.Enum;
 using Ofertas.Dominio.Entidades;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Ofertas.Dominio.Repositories
@@ -51,7 +52,15 @@ namespace Ofertas.Dominio.Repositories
         /// </summary>
         /// <param name="id">tipo do produto buscado (alimento ou roupa)</param>
         /// <returns>Retorna o produto do tipo específico buscado</returns>
-        Produto BuscarProdutoPorTipo(bool tipo);
+        Produto BuscarProdutoPorTipo(EnTipoProduto tipo);
+
+
+        /// <summary>
+        /// Busca o produto através do seu status (alimento ou roupa)
+        /// </summary>
+        /// <param name="id">status do produto buscado (normal ou oferta)</param>
+        /// <returns>Retorna o produto do status específico buscado</returns>
+        Produto BuscarProdutoPorStatus(EnStatusPreco status);
 
 
 
@@ -62,8 +71,14 @@ namespace Ofertas.Dominio.Repositories
         /// <returns>Uma lista de produtos</returns>
 
         // ? porque null não é nem true nem false
-        IEnumerable<Produto> ListarProdutos(EnStatusProduto? status = null);
+        IEnumerable<Produto> ListarProdutos(EnStatusReservaProduto? statusReserva = null);
 
+
+        /// <summary>
+        /// Exclui o produto através do seu id
+        /// </summary>
+        /// <param name="id">id do produto que vai ser excluído</param>
+        void ExcluirProduto(Guid id);
 
 
     }

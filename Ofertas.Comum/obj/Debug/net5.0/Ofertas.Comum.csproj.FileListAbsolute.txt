@@ -21,3 +21,14 @@ C:\Users\User\Desktop\Nova pasta\Sales_Project\Ofertas.Comum\obj\Debug\net5.0\Of
 C:\Users\User\Desktop\Nova pasta\Sales_Project\Ofertas.Comum\obj\Debug\net5.0\Ofertas.Comum.dll
 C:\Users\User\Desktop\Nova pasta\Sales_Project\Ofertas.Comum\obj\Debug\net5.0\ref\Ofertas.Comum.dll
 C:\Users\User\Desktop\Nova pasta\Sales_Project\Ofertas.Comum\obj\Debug\net5.0\Ofertas.Comum.pdb
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Ofertas.Comum\bin\Debug\net5.0\Ofertas.Comum.deps.json
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Ofertas.Comum\bin\Debug\net5.0\Ofertas.Comum.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Ofertas.Comum\bin\Debug\net5.0\ref\Ofertas.Comum.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Ofertas.Comum\bin\Debug\net5.0\Ofertas.Comum.pdb
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Ofertas.Comum\obj\Debug\net5.0\Ofertas.Comum.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Ofertas.Comum\obj\Debug\net5.0\Ofertas.Comum.AssemblyInfoInputs.cache
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Ofertas.Comum\obj\Debug\net5.0\Ofertas.Comum.AssemblyInfo.cs
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Ofertas.Comum\obj\Debug\net5.0\Ofertas.Comum.csproj.CoreCompileInputs.cache
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Ofertas.Comum\obj\Debug\net5.0\Ofertas.Comum.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Ofertas.Comum\obj\Debug\net5.0\ref\Ofertas.Comum.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Ofertas.Comum\obj\Debug\net5.0\Ofertas.Comum.pdb

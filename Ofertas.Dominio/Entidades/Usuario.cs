@@ -1,8 +1,8 @@
 ﻿using Flunt.Notifications;
 using Flunt.Validations;
 using Ofertas.Comum;
-
-
+using Ofertas.Dominio.Entidades;
+using System.Collections.Generic;
 
 namespace Ofertas.Dominio
 {
@@ -55,19 +55,21 @@ namespace Ofertas.Dominio
         }
 
 
-        public void AtualizaUsuario(string nome, string email)
+        public void AtualizaUsuario(string nome, string email, EnTipoUsuario tipo)
         {
             AddNotifications(
                 new Contract<Notification>()
                     .Requires()
                     .IsNotEmpty(nome, "Nome", "Nome não pode ser vazio")
                     .IsEmail(email, "Email", "O formato de email está incorreto")
+                    .IsNotNull(tipo, "Tipo Usuário", "Tipo de usuário não pode ser nulo")
             );
 
             if (IsValid)
             {
                 Nome = nome;
                 Email = email;
+                TipoUsuario = tipo;
             }
 
         }

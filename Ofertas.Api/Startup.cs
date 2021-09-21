@@ -6,7 +6,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using Ofertas.Dominio.Handlers.Usuario;
+using Ofertas.Dominio.Handlers.Autenticacao;
+using Ofertas.Dominio.Handlers.Produtos;
+using Ofertas.Dominio.Handlers.ReservaProdutos;
+using Ofertas.Dominio.Handlers.Usuarios;
 using Ofertas.Dominio.Repositories;
 using Ofertas.InfraData.Contexts;
 using Ofertas.InfraData.Repositories;
@@ -72,14 +75,34 @@ namespace Ofertas.Api
             });
 
             // injeções de dependência
+
+            #region Usuarios
             services.AddTransient<IUsuarioRepositorio, UsuarioRepositorio>();
             services.AddTransient<CadastrarContaHandle, CadastrarContaHandle>();
+            services.AddTransient<ListarUsuariosHandle, ListarUsuariosHandle>();
+            services.AddTransient<ObterDadosHandle, ObterDadosHandle>();
+            services.AddTransient<ExcluirUsuarioHandle, ExcluirUsuarioHandle>();
+            services.AddTransient<LogarHandle, LogarHandle>();
+            services.AddTransient<RecuperarSenhaHandle, RecuperarSenhaHandle>();
+            services.AddTransient<AlterarSenhaHandle, AlterarSenhaHandle>();
+            #endregion
 
-
+            #region Produtos
+            services.AddTransient<IProdutoRepositorio, ProdutoRepositorio>();
+            services.AddTransient<IReservaProdutoRepositorio, ReservaProdutoRepositorio>();
+            services.AddTransient<AlterarProdutoHandle, AlterarProdutoHandle>();
+            services.AddTransient<AlterarStatusHandle, AlterarStatusHandle>();
+            services.AddTransient<BuscarProdutoHandle, BuscarProdutoHandle>();
+            services.AddTransient<CadastrarProdutoHandle, CadastrarProdutoHandle>();
+            services.AddTransient<ExcluirProdutoHandle, ExcluirProdutoHandle>();
+            services.AddTransient<ListarProdutosHandle, ListarProdutosHandle>();
+            services.AddTransient<ReservarProdutoHandle, ReservarProdutoHandle>();
+            services.AddTransient<ListarReservasHandle, ListarReservasHandle>();
+            #endregion
 
         }
 
-        
+
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

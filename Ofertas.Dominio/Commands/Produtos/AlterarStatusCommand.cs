@@ -7,12 +7,12 @@ namespace Ofertas.Dominio.Commands.Produto
 {
     public class AlterarStatusCommand : Notifiable<Notification>, ICommand
     {
-        public AlterarStatusCommand(EnStatusProduto status)
+        public AlterarStatusCommand(EnStatusPreco status)
         {
-            Status = status;
+            StatusPreco = status;
         }
 
-        public EnStatusProduto Status { get; set; }
+        public EnStatusPreco StatusPreco { get; set; }
 
 
         public void Validar()
@@ -21,7 +21,7 @@ namespace Ofertas.Dominio.Commands.Produto
                 
                 new Contract<Notification>()
                     .Requires()
-                    .IsNotNull(Status,"Status","O status do produto não pode ser nulo")
+                    .IsNotNull(StatusPreco,"Status","O status do produto não pode ser nulo")
                 
 
             );

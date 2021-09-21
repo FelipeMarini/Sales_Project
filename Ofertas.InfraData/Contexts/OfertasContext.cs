@@ -63,6 +63,8 @@ namespace Ofertas.InfraData.Contexts
 
             #region Tabela Produtos
 
+            modelBuilder.Entity<Produto>().ToTable("Produtos");
+
             modelBuilder.Entity<Produto>().Property(x => x.Id);
 
             modelBuilder.Entity<Produto>().Property(x => x.Titulo).HasMaxLength(100);
@@ -76,9 +78,6 @@ namespace Ofertas.InfraData.Contexts
             modelBuilder.Entity<Produto>().Property(x => x.Descricao).HasMaxLength(500);
             modelBuilder.Entity<Produto>().Property(x => x.Descricao).HasColumnType("text(500)");
             modelBuilder.Entity<Produto>().Property(x => x.Descricao).IsRequired();
-
-            modelBuilder.Entity<Produto>().Property(x => x.TipoProduto).HasColumnType("bit"); // boolean
-            modelBuilder.Entity<Produto>().Property(x => x.TipoProduto).IsRequired();
 
             modelBuilder.Entity<Produto>().Property(x => x.Quantidade).HasColumnType("int");
 

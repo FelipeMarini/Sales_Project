@@ -51,6 +51,16 @@ namespace Ofertas.Dominio.Repositories
 
         
         
+        
+        /// <summary>
+        /// Exclui o usuário através do seu id
+        /// </summary>
+        /// <param name="id">id do usuário que vai ser excluído</param>
+        void ExcluirUsuario(Guid id);
+
+        
+        
+        
         /// <summary>
         /// Lista todos os usuários ou de acordo com o seu tipo (admnistrador/comum)
         /// </summary>
@@ -58,7 +68,7 @@ namespace Ofertas.Dominio.Repositories
         /// <returns>Uma lista de usuários</returns>
 
         // bool? porque null não é nem true nem false
-        ICollection<Usuario> ListarUsuarios(EnTipoUsuario? tipo = null);
+        IEnumerable<Usuario> ListarUsuarios(EnTipoUsuario? tipo = null);
 
 
 

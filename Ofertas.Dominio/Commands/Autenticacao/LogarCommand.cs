@@ -29,5 +29,7 @@ namespace Ofertas.Dominio.Commands.Autenticacao
                 
             );
         }
+    
     }
+
 }

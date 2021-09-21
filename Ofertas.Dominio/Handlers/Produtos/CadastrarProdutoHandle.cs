@@ -38,14 +38,6 @@ namespace Ofertas.Dominio.Handlers.Produtos
             }
 
             
-            var produtoExiste2 = produtoRepositorio.BuscarProdutoPorTipo(command.TipoProduto);
-
-            if (produtoExiste2 != null)
-            {
-                return new GenericCommandResult(false, "Produto já cadastrado", null);
-            }
-
-            
             var produtoExiste3 = produtoRepositorio.BuscarProdutoPorDescricao(command.Descricao);
 
             if (produtoExiste3 != null)
@@ -59,14 +51,16 @@ namespace Ofertas.Dominio.Handlers.Produtos
                     command.Titulo,
                     command.Imagem,
                     command.Descricao,
-                    command.Status,
+                    command.StatusPreco,
                     command.TipoProduto,
+                    command.StatusReserva,
                     command.Quantidade
                 );
 
 
             produtoRepositorio.CadastrarProduto(produto);
 
+            
             return new GenericCommandResult(true, "Produto cadastrado com sucesso", produto);          
 
         }

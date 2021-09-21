@@ -37,7 +37,12 @@ namespace Ofertas.InfraData.Repositories
             return ctx.Produtos.FirstOrDefault(x => x.Id == id);
         }
 
-        public Produto BuscarProdutoPorTipo(bool tipo)
+        public Produto BuscarProdutoPorStatus(EnStatusPreco status)
+        {
+            return ctx.Produtos.FirstOrDefault(x => x.StatusPreco == status);
+        }
+
+        public Produto BuscarProdutoPorTipo(EnTipoProduto tipo)
         {
             return ctx.Produtos.FirstOrDefault(x => x.TipoProduto == tipo);
         }
@@ -53,7 +58,14 @@ namespace Ofertas.InfraData.Repositories
             ctx.SaveChanges();
         }
 
-        public IEnumerable<Produto> ListarProdutos(EnStatusProduto? status = null)
+        public void ExcluirProduto(Guid id)
+        {
+            ctx.Produtos.Remove(BuscarProdutoPorId(id));
+
+            ctx.SaveChanges();
+        }
+
+        public IEnumerable<Produto> ListarProdutos(EnStatusReservaProduto? statusReserva = null)
         {
             // incluo a classe ReservaProduto aqui?
             return ctx.Produtos
@@ -62,6 +74,8 @@ namespace Ofertas.InfraData.Repositories
                 .ToList();
 
         }
-    
+
+        
     }
+
 }

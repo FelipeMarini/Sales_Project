@@ -56,7 +56,13 @@ namespace Ofertas.InfraData.Repositories
             ctx.SaveChanges();
         }
 
-        
+        public void ExcluirUsuario(Guid id)
+        {
+            ctx.Usuarios.Remove(BuscarUsuarioPorId(id));
+
+            ctx.SaveChanges();
+        }
+
         public ICollection<Usuario> ListarUsuarios(EnTipoUsuario? tipo = null)
         {
             return ctx.Usuarios
@@ -64,9 +70,11 @@ namespace Ofertas.InfraData.Repositories
                 .OrderBy(x => x.DataCriacao)
                 .ToList();
         }
-    
-    
-    
+
+        IEnumerable<Usuario> IUsuarioRepositorio.ListarUsuarios(EnTipoUsuario? tipo)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }

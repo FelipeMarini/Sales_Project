@@ -11,17 +11,18 @@ namespace Ofertas.Dominio.Commands.Produtos
         {
             
         }
-        
-        public CadastrarProdutoCommand(string titulo, string imagem, string descricao, EnStatusProduto status, bool tipo, int quantidade)
+
+        public CadastrarProdutoCommand(string titulo, string imagem, string descricao, EnStatusPreco statusPreco, EnTipoProduto tipo, EnStatusReservaProduto statusReserva, int quantidade)
         {
             Titulo = titulo;
             Imagem = imagem;
             Descricao = descricao;
-            Status = status; // oferta ou normal
-            TipoProduto = tipo; // roupa ou alimento
+            StatusPreco = statusPreco;
+            TipoProduto = tipo;
+            StatusReserva = statusReserva;
             Quantidade = quantidade;
-            
         }
+
 
         public string Titulo { get; set; }
 
@@ -29,9 +30,11 @@ namespace Ofertas.Dominio.Commands.Produtos
 
         public string Descricao { get; set; }
 
-        public EnStatusProduto Status { get; set; }
+        public EnStatusPreco StatusPreco { get; set; }
 
-        public bool TipoProduto { get; set; }
+        public EnTipoProduto TipoProduto { get; set; }
+
+        public EnStatusReservaProduto StatusReserva { get; set; }
 
         public int Quantidade { get; set; }
 
@@ -39,19 +42,19 @@ namespace Ofertas.Dominio.Commands.Produtos
         public void Validar()
         {
             AddNotifications(
-            
+
                 new Contract<Notification>()
                     .Requires()
                     .IsNotEmpty(Titulo, "Título", "Título não pode ser vazio")
                     .IsNotEmpty(Imagem, "Imagem", "Imagem não pode ser vazia")
                     .IsNotEmpty(Descricao, "Descrição", "Descrição não pode ser vazia")
-                    .IsNotNull(Status, "Status", "Status não pode ser nulo")
+                    .IsNotNull(StatusPreco, "Status do Preço (Normal ou Oferta)", "Status do preço não pode ser nulo")
                     .IsNotNull(TipoProduto, "Tipo", "Tipo não pode ser nulo")
+                    .IsNotNull(StatusReserva, "Status da Reserva do Produto (Livre ou Reservado)", "Status da reserva não pode ser nula")
                     .IsNotNull(Quantidade, "Quantidade", "Quantidade não pode ser nula")
             );
-        
+
         }
-    
-    
+
     }
 }

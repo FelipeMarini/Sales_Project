@@ -3,24 +3,24 @@ using Flunt.Validations;
 using Ofertas.Comum;
 using Ofertas.Comum.Enum;
 
-
 namespace Ofertas.Dominio.Entidades
 {
     public class Produto : Base
     {
-        public Produto(string titulo, string imagem, string descricao, EnStatusProduto status, bool tipo, int quantidade)
+        public Produto(string titulo, string imagem, string descricao, EnStatusPreco statusPreco, EnTipoProduto tipo, EnStatusReservaProduto statusReserva, int quantidade)
         {
 
             AddNotifications(
                 
                 new Contract<Notification>()
                     .Requires()
-                    .IsNotEmpty(titulo,"Título","Título não pode ser vazio")
+                    .IsNotEmpty(titulo, "Título", "Título não pode ser vazio")
                     .IsNotEmpty(imagem, "Imagem", "Imagem não pode ser vazia")
                     .IsNotEmpty(descricao, "Descrição", "Descrição não pode ser vazia")
-                    .IsNotNull(status,"Status","Status não pode ser nulo")
+                    .IsNotNull(statusPreco, "Status do Preço (Normal ou Oferta)", "Status do preço não pode ser nulo")
                     .IsNotNull(tipo, "Tipo", "Tipo não pode ser nulo")
-                    .IsNotNull(quantidade, "Quantidade", "Quantidade não pode ser nula") // mas pode ser zero
+                    .IsNotNull(statusReserva, "Status da Reserva do Produto (Livre ou Reservado)", "Status da reserva não pode ser nulo")
+                    .IsNotNull(quantidade, "Quantidade", "Quantidade não pode ser nula")
             );
 
 
@@ -30,26 +30,30 @@ namespace Ofertas.Dominio.Entidades
                 Titulo = titulo;
                 Imagem = imagem;
                 Descricao = descricao;
-                Status = status;
+                StatusPreco = statusPreco;
                 TipoProduto = tipo;
+                StatusReserva = statusReserva;
                 Quantidade = quantidade;
             }
         }
 
-        public string Titulo { get; set; }
+        public string Titulo { get; private set; }
 
-        public string Imagem { get; set; }
+        public string Imagem { get; private set; }
 
-        public string Descricao { get; set; }
+        public string Descricao { get; private set; }
 
-        public EnStatusProduto Status { get; set; }
+        public EnStatusPreco StatusPreco { get; private set; }
 
-        public bool TipoProduto { get; set; }
+        public EnTipoProduto TipoProduto { get; private set; }
 
-        public int Quantidade { get; set; }
+        public EnStatusReservaProduto StatusReserva { get; set; }  // gambiarra por tirar o private? rs
+
+        public int Quantidade { get; private set; }
 
 
-        public void AtualizaProduto(string titulo, string imagem, string descricao, EnStatusProduto status, bool tipo, int quantidade)
+
+        public void AtualizaProduto(string titulo, string imagem, string descricao, EnStatusPreco statusPreco, EnTipoProduto tipo, EnStatusReservaProduto statusReserva, int quantidade)
         {
             AddNotifications(
                 new Contract<Notification>()
@@ -57,8 +61,9 @@ namespace Ofertas.Dominio.Entidades
                     .IsNotEmpty(titulo, "Título", "Título não pode ser vazio")
                     .IsNotEmpty(imagem, "Imagem", "Imagem não pode ser vazia")
                     .IsNotEmpty(descricao, "Descrição", "Descrição não pode ser vazia")
-                    .IsNotNull(status,"Status","Status não pode ser nulo")
-                    .IsNotNull(tipo,"Tipo","Tipo não pode ser nulo")
+                    .IsNotNull(statusPreco,"Status do Preço (Normal ou Oferta)","Status do preço não pode ser nulo")
+                    .IsNotNull(tipo,"Tipo de Produto","Tipo de produto (alimento/roupa) não pode ser nulo")
+                    .IsNotNull(statusReserva, "Status da Reserva do Produto (Livre ou Reservado)", "Status da reserva não pode ser nula")
                     .IsNotNull(quantidade, "Quantidade", "Quantidade não pode ser nula")
             );
 
@@ -67,46 +72,16 @@ namespace Ofertas.Dominio.Entidades
                 Titulo = titulo;
                 Imagem = imagem;
                 Descricao = descricao;
-                Status = status;
+                StatusPreco = statusPreco;
                 TipoProduto = tipo;
+                StatusReserva = statusReserva;
                 Quantidade = quantidade;
             }
 
         }
-
-
-        public void AtualizaStatus(EnStatusProduto status)
-        {
-            AddNotifications(
-                new Contract<Notification>()
-                    .Requires()
-                    .IsNotNull(status, "Status", "Status do produto não pode ser nulo")                    
-            );
-
-            if (IsValid)
-            {
-                Status = status;
-            }
-
-        }
-
-        public void AtualizaTipo(bool tipo)
-        {
-            AddNotifications(
-                new Contract<Notification>()
-                    .Requires()
-                    .IsNotNull(tipo, "Tipo", "Tipo de produto não pode ser nulo")
-            );
-
-            if (IsValid)
-            {
-                TipoProduto = tipo;
-            }
-
-        }
-
-
+       
 
 
     }
+
 }
