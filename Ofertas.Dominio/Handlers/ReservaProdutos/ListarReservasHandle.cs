@@ -24,8 +24,9 @@ namespace Ofertas.Dominio.Handlers.ReservaProdutos
 
 
 
-            var reservas = reservaRepositorio.ListarReservas();
+            var reservas = reservaRepositorio.ListarReservas(Guid id);
 
+            
             var retornoReservas = reservas.Select(
 
                     x =>
@@ -38,17 +39,15 @@ namespace Ofertas.Dominio.Handlers.ReservaProdutos
                             DataCriacao = x.DataCriacao,
                             
                             // produto
-                            Titulo = x.Produto.Titulo,
-                            Imagem = x.Produto.Imagem,
-                            Descricao = x.Produto.Descricao,
-                            TipoProduto = x.Produto.TipoProduto,
-                            StatusPreco = x.Produto.StatusPreco,
-                            StatusReserva = x.Produto.StatusReserva,
-                            Quantidade = x.Produto.Quantidade,
+                            Titulo = x.Titulo,
+                            Imagem = x.Imagem,
+                            Descricao = x.Descricao,
+                            StatusPreco = x.StatusPreco,
+                            Quantidade = x.Quantidade,
                             
                             // usuário
-                            Nome = x.Usuario.Nome,
-                            Email = x.Usuario.Email
+                            Nome = x.Nome,
+                            Email = x.Email
 
                         };
                 

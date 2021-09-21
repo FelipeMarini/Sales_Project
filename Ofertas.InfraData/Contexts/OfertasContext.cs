@@ -19,11 +19,13 @@ namespace Ofertas.InfraData.Contexts
 
         public DbSet<Produto> Produtos { get; set; }
 
-    
+        public DbSet<ReservaProduto> Reservas { get; set; }
+
+
         // console do gerenciador de pacotes do NuGet (ferramentas):
         // add-migration "Banco Inicial - Tabela Usuarios" -> cria tabela (migration) na pasta migrations
         // update-database -> cria efetivamente o banco no Sql Server Management Studio
-        
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
@@ -86,6 +88,16 @@ namespace Ofertas.InfraData.Contexts
 
             #endregion
 
+
+            #region Tabela Reservas
+            
+            modelBuilder.Entity<ReservaProduto>().ToTable("Reservas");
+
+            modelBuilder.Entity<Produto>().Property(x => x.Id);
+
+
+
+            #endregion
 
             base.OnModelCreating(modelBuilder);
 

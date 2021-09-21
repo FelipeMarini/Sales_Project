@@ -1,8 +1,6 @@
 ﻿using Flunt.Notifications;
 using Flunt.Validations;
 using Ofertas.Comum;
-using Ofertas.Dominio.Entidades;
-using System.Collections.Generic;
 
 namespace Ofertas.Dominio
 {

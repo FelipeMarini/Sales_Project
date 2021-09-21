@@ -20,23 +20,25 @@ namespace Ofertas.Dominio.Queries.ReservaProduto
 
             public DateTime DataCriacao { get; set; }
 
+            public string Nome { get; set; }
+
+            public string Email { get; set; }
+
             public string Titulo { get; set; }
 
             public string Imagem { get; set; }
 
             public string Descricao { get; set; }
 
-            public EnTipoProduto TipoProduto { get; set; }
-
             public EnStatusPreco StatusPreco { get; set; }
-
-            public EnStatusReservaProduto StatusReserva { get; set; }
 
             public int Quantidade { get; set; }
 
-            public string Nome { get; set; }
 
-            public string Email { get; set; }
+            public Guid IdUsuario { get; set; }
+
+            public Guid IdProduto { get; set; }
+
         
         }    
     
