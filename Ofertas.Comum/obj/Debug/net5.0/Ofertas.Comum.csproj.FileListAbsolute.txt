@@ -32,3 +32,4 @@ C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Ofertas.Comum\obj\Debug\net5.
 C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Ofertas.Comum\obj\Debug\net5.0\Ofertas.Comum.dll
 C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Ofertas.Comum\obj\Debug\net5.0\ref\Ofertas.Comum.dll
 C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Ofertas.Comum\obj\Debug\net5.0\Ofertas.Comum.pdb
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Ofertas.Comum\obj\Debug\net5.0\Ofertas.Comum.csproj.AssemblyReference.cache

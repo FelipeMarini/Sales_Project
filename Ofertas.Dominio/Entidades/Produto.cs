@@ -2,6 +2,7 @@
 using Flunt.Validations;
 using Ofertas.Comum;
 using Ofertas.Comum.Enum;
+using System.Collections.Generic;
 
 namespace Ofertas.Dominio.Entidades
 {
@@ -50,6 +51,15 @@ namespace Ofertas.Dominio.Entidades
         public EnStatusReservaProduto StatusReserva { get; set; }  // gambiarra por tirar o private? rs
 
         public int Quantidade { get; private set; }
+
+
+
+        // lista de reservas associadas a um determinado produto
+        public IReadOnlyCollection<ReservaProduto> Reservations { get { return _reservations.ToArray(); } }
+
+        
+        // lista de reservas associadas a um determinado produto        
+        private List<ReservaProduto> _reservations = new List<ReservaProduto>();
 
 
 

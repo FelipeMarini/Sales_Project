@@ -82,7 +82,7 @@ namespace Ofertas.Api.Controllers
 
         }
 
-        [Route("changepwd")]  // precisa aqui?
+        [Route("changepwd")]
         [HttpPut]
         [Authorize]
         public GenericCommandResult ChangePassword(AlterarSenhaCommand command, [FromServices] AlterarSenhaHandle handle)
@@ -127,14 +127,24 @@ namespace Ofertas.Api.Controllers
         // reservas
 
         [HttpPost]
+        [Authorize]
         public GenericCommandResult BookProduct(ReservarProdutoCommand command, [FromServices] ReservarProdutoHandle handle)
         {
             return (GenericCommandResult)handle.Handler(command);
         }
 
 
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        public GenericQueryResult GetOneReservation(MostrarReservaQuery query, [FromServices] MostrarReservaHandle handle)
+        {
+            return (GenericQueryResult)handle.Handler(query);
+        }
+
+
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public GenericQueryResult GetReservations(ListarReservasQuery query, [FromServices] ListarReservasHandle handle)
         {
             return (GenericQueryResult)handle.Handler(query);

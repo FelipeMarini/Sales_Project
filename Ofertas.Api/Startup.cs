@@ -61,6 +61,7 @@ namespace Ofertas.Api
                });
 
 
+            
             services.AddCors(options => {
                 
                 options.AddPolicy("CorsPolicy",
@@ -74,30 +75,32 @@ namespace Ofertas.Api
                 );
             });
 
-            // injeções de dependência
-
+            
+            // injeções de dependência            
             #region Usuarios
-            services.AddTransient<IUsuarioRepositorio, UsuarioRepositorio>();
-            services.AddTransient<CadastrarContaHandle, CadastrarContaHandle>();
-            services.AddTransient<ListarUsuariosHandle, ListarUsuariosHandle>();
-            services.AddTransient<ObterDadosHandle, ObterDadosHandle>();
-            services.AddTransient<ExcluirUsuarioHandle, ExcluirUsuarioHandle>();
-            services.AddTransient<LogarHandle, LogarHandle>();
-            services.AddTransient<RecuperarSenhaHandle, RecuperarSenhaHandle>();
-            services.AddTransient<AlterarSenhaHandle, AlterarSenhaHandle>();
+            services.AddTransient<IUsuarioRepositorio,UsuarioRepositorio>();
+            services.AddTransient<CadastrarContaHandle,CadastrarContaHandle>();
+            services.AddTransient<ListarUsuariosHandle,ListarUsuariosHandle>();
+            services.AddTransient<ObterDadosHandle,ObterDadosHandle>();
+            services.AddTransient<ExcluirUsuarioHandle,ExcluirUsuarioHandle>();
+            services.AddTransient<LogarHandle,LogarHandle>();
+            services.AddTransient<RecuperarSenhaHandle,RecuperarSenhaHandle>();
+            services.AddTransient<AlterarSenhaHandle,AlterarSenhaHandle>();
+
+            services.AddTransient<IReservaProdutoRepositorio,ReservaProdutoRepositorio>();
+            services.AddTransient<ReservarProdutoHandle,ReservarProdutoHandle>();
+            services.AddTransient<ListarReservasHandle,ListarReservasHandle>();
             #endregion
 
+            
             #region Produtos
-            services.AddTransient<IProdutoRepositorio, ProdutoRepositorio>();
-            services.AddTransient<IReservaProdutoRepositorio, ReservaProdutoRepositorio>();
-            services.AddTransient<AlterarProdutoHandle, AlterarProdutoHandle>();
-            services.AddTransient<AlterarStatusHandle, AlterarStatusHandle>();
-            services.AddTransient<BuscarProdutoHandle, BuscarProdutoHandle>();
-            services.AddTransient<CadastrarProdutoHandle, CadastrarProdutoHandle>();
-            services.AddTransient<ExcluirProdutoHandle, ExcluirProdutoHandle>();
-            services.AddTransient<ListarProdutosHandle, ListarProdutosHandle>();
-            services.AddTransient<ReservarProdutoHandle, ReservarProdutoHandle>();
-            services.AddTransient<ListarReservasHandle, ListarReservasHandle>();
+            services.AddTransient<IProdutoRepositorio,ProdutoRepositorio>();            
+            services.AddTransient<AlterarProdutoHandle,AlterarProdutoHandle>();
+            services.AddTransient<AlterarStatusHandle,AlterarStatusHandle>();
+            services.AddTransient<BuscarProdutoHandle,BuscarProdutoHandle>();
+            services.AddTransient<CadastrarProdutoHandle,CadastrarProdutoHandle>();
+            services.AddTransient<ExcluirProdutoHandle,ExcluirProdutoHandle>();
+            services.AddTransient<ListarProdutosHandle,ListarProdutosHandle>();                        
             #endregion
 
         }
@@ -127,5 +130,7 @@ namespace Ofertas.Api
                 endpoints.MapControllers();
             });
         }
+    
     }
+
 }

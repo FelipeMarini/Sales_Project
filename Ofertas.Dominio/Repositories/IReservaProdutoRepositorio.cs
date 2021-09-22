@@ -10,9 +10,10 @@ namespace Ofertas.Dominio.Repositories
         /// <summary>
         /// Usuário realiza a reserva de um determinado produto
         /// </summary>
+        /// <param name="reserva">objeto contendo os dados da reserva (id do usuario e produto)</param>
         /// <param name="usuario">objeto contendo os dados do usuário que efetua a reserva</param>
         /// <param name="produto">objeto contendo os dados do produto que será reservado</param>
-        void ReservarProduto( Usuario usuario, Produto produto);
+        void ReservarProduto(ReservaProduto reserva, Usuario usuario, Produto produto, int quantidade);
 
 
         /// <summary>
@@ -28,7 +29,7 @@ namespace Ofertas.Dominio.Repositories
         /// </summary>
         /// <param name="idUsuario">id do usuário que possui as reservas</param>
         /// <returns></returns>
-        List<ReservaProduto> ListarReservas(Guid idUsuario);
+        IReadOnlyCollection<ReservaProduto> ListarReservas(Guid idUsuario);
 
 
     }

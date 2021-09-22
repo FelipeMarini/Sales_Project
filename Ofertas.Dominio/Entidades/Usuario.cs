@@ -1,6 +1,8 @@
 ﻿using Flunt.Notifications;
 using Flunt.Validations;
 using Ofertas.Comum;
+using Ofertas.Dominio.Entidades;
+using System.Collections.Generic;
 
 namespace Ofertas.Dominio
 {
@@ -38,6 +40,11 @@ namespace Ofertas.Dominio
         public string Senha { get; private set; }
 
         public EnTipoUsuario TipoUsuario { get; private set; }
+
+
+        
+        // lista de reservas de um determinado usuário
+        public IReadOnlyCollection<ReservaProduto> Reservations { get; private set; }
 
 
         public void AtualizaSenha(string senha)

@@ -8,6 +8,7 @@ namespace Ofertas.InfraData.Contexts
     public class OfertasContext : DbContext
     {
 
+        
         public OfertasContext(DbContextOptions<OfertasContext> options) : base(options)
         {
 
@@ -19,10 +20,10 @@ namespace Ofertas.InfraData.Contexts
 
         public DbSet<Produto> Produtos { get; set; }
 
-        public DbSet<ReservaProduto> Reservas { get; set; }
+        public DbSet<ReservaProduto> Reservations { get; set; }
 
 
-        // console do gerenciador de pacotes do NuGet (ferramentas):
+        // console do gerenciador de pacotes do NuGet (Ferramentas):
         // add-migration "Banco Inicial - Tabela Usuarios" -> cria tabela (migration) na pasta migrations
         // update-database -> cria efetivamente o banco no Sql Server Management Studio
 
@@ -37,6 +38,11 @@ namespace Ofertas.InfraData.Contexts
             #region Tabela Usuarios  
 
             modelBuilder.Entity<Usuario>().ToTable("Usuarios");
+
+            modelBuilder.Entity<Usuario>()
+                .HasMany(c => c.Reservations)
+                .WithOne(e => e.Usuario)
+                .HasForeignKey(x => x.IdUsuario);
 
             modelBuilder.Entity<Usuario>().Property(x => x.Id);
             //pelo nome ser "Id" já gera uma PK automática
@@ -67,6 +73,11 @@ namespace Ofertas.InfraData.Contexts
 
             modelBuilder.Entity<Produto>().ToTable("Produtos");
 
+            modelBuilder.Entity<Produto>()
+                .HasMany(c => c.Reservations)
+                .WithOne(e => e.Produto)
+                .HasForeignKey(x => x.IdProduto);
+
             modelBuilder.Entity<Produto>().Property(x => x.Id);
 
             modelBuilder.Entity<Produto>().Property(x => x.Titulo).HasMaxLength(100);
@@ -93,9 +104,16 @@ namespace Ofertas.InfraData.Contexts
             
             modelBuilder.Entity<ReservaProduto>().ToTable("Reservas");
 
-            modelBuilder.Entity<Produto>().Property(x => x.Id);
+            // id da reserva, Guid herdado de Base.cs
+            modelBuilder.Entity<ReservaProduto>().Property(x => x.Id);
 
 
+            // coloco os ids de usuário e produto aqui?
+
+
+            // quantidade do produto a ser reservado
+            modelBuilder.Entity<ReservaProduto>().Property(x => x.Quantidade).HasColumnType("int");
+            modelBuilder.Entity<ReservaProduto>().Property(x => x.Quantidade).IsRequired();
 
             #endregion
 

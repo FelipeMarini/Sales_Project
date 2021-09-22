@@ -8,6 +8,9 @@ namespace Ofertas.Dominio.Queries.ReservaProduto
     {
 
 
+        public Guid idUsuario { get; set; }
+
+
         public void Validar()
         {
             throw new System.NotImplementedException();
@@ -16,14 +19,21 @@ namespace Ofertas.Dominio.Queries.ReservaProduto
 
         public class ListarReservasResult
         {
+            
             public Guid Id { get; set; }
 
             public DateTime DataCriacao { get; set; }
+            
+            public int Quantidade { get; set; }
 
+            
+            
             public string Nome { get; set; }
 
             public string Email { get; set; }
 
+            
+            
             public string Titulo { get; set; }
 
             public string Imagem { get; set; }
@@ -32,12 +42,9 @@ namespace Ofertas.Dominio.Queries.ReservaProduto
 
             public EnStatusPreco StatusPreco { get; set; }
 
-            public int Quantidade { get; set; }
+            public EnTipoProduto TipoProduto { get; set; }
 
 
-            public Guid IdUsuario { get; set; }
-
-            public Guid IdProduto { get; set; }
 
         
         }    

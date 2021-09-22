@@ -4,13 +4,9 @@ using Ofertas.Comum;
 using Ofertas.Comum.Commands;
 using Ofertas.Comum.Enum;
 using Ofertas.Comum.Queries;
-using Ofertas.Dominio.Commands.Produto;
 using Ofertas.Dominio.Commands.Produtos;
-using Ofertas.Dominio.Commands.ReservaProdutos;
 using Ofertas.Dominio.Handlers.Produtos;
-using Ofertas.Dominio.Handlers.ReservaProdutos;
 using Ofertas.Dominio.Queries.Produto;
-using Ofertas.Dominio.Queries.ReservaProduto;
 using System.Linq;
 using System.Security.Claims;
 

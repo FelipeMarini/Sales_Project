@@ -27,45 +27,44 @@ namespace Ofertas.Dominio.Handlers.ReservaProdutos
 
             if (!command.IsValid)
             {
-                return new GenericCommandResult(false,"Dados inválidos do produto",command.Notifications);
+                return new GenericCommandResult(false,"Dados inválidos para reserva",command.Notifications);
             }
 
             
             Usuario usuario = new Usuario
                 (
-                    command.Nome,
-                    command.Email,
-                    command.Senha,
-                    command.TipoUsuario
+                    command.Usuario.Nome,
+                    command.Usuario.Email,
+                    command.Usuario.Senha,
+                    command.Usuario.TipoUsuario
                 );
 
             
             Produto produto = new Produto
                 (
-                    command.Titulo,
-                    command.Imagem,
-                    command.Descricao,
-                    command.StatusPreco,
-                    command.TipoProduto,
-                    command.StatusReserva,
-                    command.Quantidade
+                    command.Produto.Titulo,
+                    command.Produto.Imagem,
+                    command.Produto.Descricao,
+                    command.Produto.StatusPreco,
+                    command.Produto.TipoProduto,
+                    command.Produto.StatusReserva,
+                    command.Produto.Quantidade
                 );
 
             ReservaProduto reserva = new ReservaProduto
                 (
-                    command.Nome,
-                    command.Email,
-                    command.Titulo,
-                    command.Imagem,
-                    command.Descricao,
-                    command.StatusPreco,
+                    command.Usuario,
+                    command.Produto,
                     command.Quantidade,
-                    command.IdUsuario,
-                    command.IdProduto
+                    command.Usuario.Id,
+                    command.Produto.Id
                 );
 
             
-            reservaRepositorio.ReservarProduto(reserva,usuario,produto);
+            var quantidade = reserva.Quantidade;
+
+            
+            reservaRepositorio.ReservarProduto(reserva,usuario,produto,quantidade);
 
             
             return new GenericCommandResult(true,"Produto reservado com sucesso","Sucesso");
