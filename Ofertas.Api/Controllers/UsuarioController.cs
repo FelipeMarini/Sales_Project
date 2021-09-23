@@ -21,7 +21,7 @@ namespace Ofertas.Api.Controllers
     [Route("v1/account")]
     [ApiController]
     
-    public class UsuarioController : ControllerBase  // vou precisar de um controller para as reservas?
+    public class UsuarioController : ControllerBase  
     {
 
         private string GenerateJSONWebToken(Usuario userInfo)
