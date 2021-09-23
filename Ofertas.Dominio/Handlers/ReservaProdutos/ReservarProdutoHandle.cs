@@ -53,15 +53,13 @@ namespace Ofertas.Dominio.Handlers.ReservaProdutos
 
             ReservaProduto reserva = new ReservaProduto
                 (
-                    command.Usuario,
-                    command.Produto,
                     command.Quantidade,
                     command.Usuario.Id,
                     command.Produto.Id
                 );
 
             
-            var quantidade = reserva.Quantidade;
+            var quantidade = command.Quantidade;
 
             
             reservaRepositorio.ReservarProduto(reserva,usuario,produto,quantidade);

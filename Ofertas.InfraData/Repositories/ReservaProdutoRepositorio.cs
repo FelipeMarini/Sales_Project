@@ -2,6 +2,7 @@
 using Ofertas.Dominio;
 using Ofertas.Dominio.Entidades;
 using Ofertas.Dominio.Repositories;
+using Ofertas.InfraData.Contexts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +12,9 @@ namespace Ofertas.InfraData.Repositories
     public class ReservaProdutoRepositorio : IReservaProdutoRepositorio
     {
 
-        private readonly ReservaProduto ctx;
+        private readonly OfertasContext ctx;
 
-        public ReservaProdutoRepositorio(ReservaProduto _ctx)
+        public ReservaProdutoRepositorio(OfertasContext _ctx)
         {
             ctx = _ctx;
         }
@@ -21,15 +22,15 @@ namespace Ofertas.InfraData.Repositories
         
         public IReadOnlyCollection<ReservaProduto> ListarReservas(Guid idUsuario)
         {
-            return (List<ReservaProduto>)ctx.ListaReservas
-                    
+            return (List<ReservaProduto>)ctx.Reservas
+
                     .Where(r => r.Usuario.Id == idUsuario);
         }
 
         
         public ReservaProduto MostrarReserva(Guid idReserva)
         {
-           return ctx.ListaReservas.FirstOrDefault(x => x.Id == idReserva);
+           return ctx.Reservas.FirstOrDefault(x => x.Id == idReserva);
         }
 
         
@@ -40,10 +41,10 @@ namespace Ofertas.InfraData.Repositories
             if (produto.StatusReserva == 0) // status livre
             {
                 // status passa a ser reservado
-                produto.StatusReserva = (Comum.Enum.EnStatusReservaProduto)1;
+                
 
-                reserva.Usuario.Id = usuario.Id;
-                reserva.Produto.Id = produto.Id;
+                reserva.IdUsuario = usuario.Id;
+                reserva.IdProduto = produto.Id;
 
                 // não reservar quantidade além da disponível
                 if (quantidade <= produto.Quantidade)
@@ -59,7 +60,7 @@ namespace Ofertas.InfraData.Repositories
                     new GenericCommandResult(false, "Quantidade indisponível", null);
                 }
 
-                ctx.AdicionarReserva(reserva);
+                ctx.Reservas.Add(reserva);
             }
             
             else

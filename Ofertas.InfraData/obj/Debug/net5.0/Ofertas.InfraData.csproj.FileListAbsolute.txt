@@ -50,3 +50,63 @@ C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Ofertas.InfraData\obj\Debug\n
 C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Ofertas.InfraData\obj\Debug\net5.0\ref\Ofertas.InfraData.dll
 C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.pdb
 C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.genruntimeconfig.cache
+C:\Users\paulo\Downloads\Projetos 3DEV\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.InfraData.deps.json
+C:\Users\paulo\Downloads\Projetos 3DEV\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.InfraData.runtimeconfig.json
+C:\Users\paulo\Downloads\Projetos 3DEV\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.InfraData.runtimeconfig.dev.json
+C:\Users\paulo\Downloads\Projetos 3DEV\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.InfraData.dll
+C:\Users\paulo\Downloads\Projetos 3DEV\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\ref\Ofertas.InfraData.dll
+C:\Users\paulo\Downloads\Projetos 3DEV\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.InfraData.pdb
+C:\Users\paulo\Downloads\Projetos 3DEV\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.Comum.dll
+C:\Users\paulo\Downloads\Projetos 3DEV\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.Dominio.dll
+C:\Users\paulo\Downloads\Projetos 3DEV\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.Dominio.pdb
+C:\Users\paulo\Downloads\Projetos 3DEV\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.Comum.pdb
+C:\Users\paulo\Downloads\Projetos 3DEV\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.csproj.AssemblyReference.cache
+C:\Users\paulo\Downloads\Projetos 3DEV\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\paulo\Downloads\Projetos 3DEV\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.AssemblyInfoInputs.cache
+C:\Users\paulo\Downloads\Projetos 3DEV\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.AssemblyInfo.cs
+C:\Users\paulo\Downloads\Projetos 3DEV\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.csproj.CoreCompileInputs.cache
+C:\Users\paulo\Downloads\Projetos 3DEV\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.csproj.CopyComplete
+C:\Users\paulo\Downloads\Projetos 3DEV\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.dll
+C:\Users\paulo\Downloads\Projetos 3DEV\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\ref\Ofertas.InfraData.dll
+C:\Users\paulo\Downloads\Projetos 3DEV\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.pdb
+C:\Users\paulo\Downloads\Projetos 3DEV\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.genruntimeconfig.cache
+C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#5\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.InfraData.deps.json
+C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#5\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.InfraData.runtimeconfig.json
+C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#5\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.InfraData.runtimeconfig.dev.json
+C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#5\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.InfraData.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#5\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\ref\Ofertas.InfraData.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#5\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.InfraData.pdb
+C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#5\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.Comum.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#5\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.Dominio.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#5\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.Dominio.pdb
+C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#5\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.Comum.pdb
+C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#5\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.csproj.AssemblyReference.cache
+C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#5\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#5\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.AssemblyInfoInputs.cache
+C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#5\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.AssemblyInfo.cs
+C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#5\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.csproj.CoreCompileInputs.cache
+C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#5\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.csproj.CopyComplete
+C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#5\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#5\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\ref\Ofertas.InfraData.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#5\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.pdb
+C:\Users\Felipe\OneDrive\Área de Trabalho\NLW#5\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.genruntimeconfig.cache
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.InfraData.deps.json
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.InfraData.runtimeconfig.json
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.InfraData.runtimeconfig.dev.json
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.InfraData.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\ref\Ofertas.InfraData.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.InfraData.pdb
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.Comum.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.Dominio.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.Dominio.pdb
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Sales_Project\Ofertas.InfraData\bin\Debug\net5.0\Ofertas.Comum.pdb
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.csproj.AssemblyReference.cache
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.AssemblyInfoInputs.cache
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.AssemblyInfo.cs
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.csproj.CoreCompileInputs.cache
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.csproj.CopyComplete
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\ref\Ofertas.InfraData.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.pdb
+C:\Users\Felipe\OneDrive\Área de Trabalho\Ofertas\Sales_Project\Ofertas.InfraData\obj\Debug\net5.0\Ofertas.InfraData.genruntimeconfig.cache

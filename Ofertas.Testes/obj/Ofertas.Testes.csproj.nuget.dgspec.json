@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Testes\\Ofertas.Testes.csproj": {}
+    "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Sales_Project\\Ofertas.Testes\\Ofertas.Testes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Comum\\Ofertas.Comum.csproj": {
+    "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Sales_Project\\Ofertas.Comum\\Ofertas.Comum.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Comum\\Ofertas.Comum.csproj",
+        "projectUniqueName": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Sales_Project\\Ofertas.Comum\\Ofertas.Comum.csproj",
         "projectName": "Ofertas.Comum",
-        "projectPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Comum\\Ofertas.Comum.csproj",
+        "projectPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Sales_Project\\Ofertas.Comum\\Ofertas.Comum.csproj",
         "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Comum\\obj\\",
+        "outputPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Sales_Project\\Ofertas.Comum\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Dominio\\Ofertas.Dominio.csproj": {
+    "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Sales_Project\\Ofertas.Dominio\\Ofertas.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Dominio\\Ofertas.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Sales_Project\\Ofertas.Dominio\\Ofertas.Dominio.csproj",
         "projectName": "Ofertas.Dominio",
-        "projectPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Dominio\\Ofertas.Dominio.csproj",
+        "projectPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Sales_Project\\Ofertas.Dominio\\Ofertas.Dominio.csproj",
         "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Dominio\\obj\\",
+        "outputPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Sales_Project\\Ofertas.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -100,8 +100,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Comum\\Ofertas.Comum.csproj": {
-                "projectPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Comum\\Ofertas.Comum.csproj"
+              "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Sales_Project\\Ofertas.Comum\\Ofertas.Comum.csproj": {
+                "projectPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Sales_Project\\Ofertas.Comum\\Ofertas.Comum.csproj"
               }
             }
           }
@@ -140,14 +140,14 @@
         }
       }
     },
-    "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Testes\\Ofertas.Testes.csproj": {
+    "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Sales_Project\\Ofertas.Testes\\Ofertas.Testes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Testes\\Ofertas.Testes.csproj",
+        "projectUniqueName": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Sales_Project\\Ofertas.Testes\\Ofertas.Testes.csproj",
         "projectName": "Ofertas.Testes",
-        "projectPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Testes\\Ofertas.Testes.csproj",
+        "projectPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Sales_Project\\Ofertas.Testes\\Ofertas.Testes.csproj",
         "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Testes\\obj\\",
+        "outputPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Sales_Project\\Ofertas.Testes\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -168,8 +168,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Dominio\\Ofertas.Dominio.csproj": {
-                "projectPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Dominio\\Ofertas.Dominio.csproj"
+              "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Sales_Project\\Ofertas.Dominio\\Ofertas.Dominio.csproj": {
+                "projectPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Sales_Project\\Ofertas.Dominio\\Ofertas.Dominio.csproj"
               }
             }
           }

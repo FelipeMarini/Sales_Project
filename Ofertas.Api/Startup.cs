@@ -32,7 +32,9 @@ namespace Ofertas.Api
 
             services.AddControllers();
 
-            services.AddDbContext<OfertasContext>(z => z.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<OfertasContext>(options =>
+              options.UseSqlServer(
+                  Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddSwaggerGen(c =>
             {
@@ -90,9 +92,10 @@ namespace Ofertas.Api
             services.AddTransient<IReservaProdutoRepositorio,ReservaProdutoRepositorio>();
             services.AddTransient<ReservarProdutoHandle,ReservarProdutoHandle>();
             services.AddTransient<ListarReservasHandle,ListarReservasHandle>();
+            services.AddTransient<MostrarReservaHandle, MostrarReservaHandle>();
             #endregion
 
-            
+
             #region Produtos
             services.AddTransient<IProdutoRepositorio,ProdutoRepositorio>();            
             services.AddTransient<AlterarProdutoHandle,AlterarProdutoHandle>();

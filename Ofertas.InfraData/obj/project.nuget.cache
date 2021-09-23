@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7fQ0OlUUwZlTDpVI4lOWyXNynqfPrEjgDAggg7wnc0dMnPhcqjjIy1BL3176iowAwIGHKuB/4yulSV50zhOpvA==",
+  "dgSpecHash": "Pq6UCLnvhLwCI4mAp59XUi1LQPchvITTcO1aqKcgiFr2waVt+/M3YkSLUxcHm88xK8TtIWE0majrpvv82p3c4Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.InfraData\\Ofertas.InfraData.csproj",
+  "projectFilePath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Sales_Project\\Ofertas.InfraData\\Ofertas.InfraData.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Felipe\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512",

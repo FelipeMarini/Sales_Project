@@ -5,12 +5,9 @@ using Ofertas.Comum.Commands;
 using Ofertas.Comum.Queries;
 using Ofertas.Dominio;
 using Ofertas.Dominio.Commands.Autenticacao;
-using Ofertas.Dominio.Commands.ReservaProdutos;
 using Ofertas.Dominio.Commands.Usuarios;
 using Ofertas.Dominio.Handlers.Autenticacao;
-using Ofertas.Dominio.Handlers.ReservaProdutos;
 using Ofertas.Dominio.Handlers.Usuarios;
-using Ofertas.Dominio.Queries.ReservaProduto;
 using Ofertas.Dominio.Queries.Usuario;
 using System;
 using System.IdentityModel.Tokens.Jwt;
@@ -99,7 +96,8 @@ namespace Ofertas.Api.Controllers
             return (GenericCommandResult)handle.Handler(command);
         }
 
-
+        
+        [Route("deleteuser")]
         [HttpDelete]
         [Authorize(Roles ="Admin")]
         public GenericCommandResult DeleteUser(ExcluirUsuarioCommand command, [FromServices] ExcluirUsuarioHandle handle)
@@ -107,7 +105,7 @@ namespace Ofertas.Api.Controllers
             return (GenericCommandResult)handle.Handler(command);
         }
 
-
+        [Route("getusers")]
         [HttpGet]
         [Authorize(Roles = "Admin")]
         public GenericQueryResult GetAllUsers(ListarUsuariosQuery query, [FromServices] ListarUsuariosHandle handle)
@@ -115,7 +113,8 @@ namespace Ofertas.Api.Controllers
             return (GenericQueryResult)handle.Handler(query);
         }
 
-
+        
+        [Route("getuser")]
         [HttpGet]
         [Authorize]
         public GenericQueryResult GetUser(ObterDadosQuery query, [FromServices] ObterDadosHandle handle)
@@ -124,32 +123,7 @@ namespace Ofertas.Api.Controllers
         }
 
 
-        // reservas
-
-        [HttpPost]
-        [Authorize]
-        public GenericCommandResult BookProduct(ReservarProdutoCommand command, [FromServices] ReservarProdutoHandle handle)
-        {
-            return (GenericCommandResult)handle.Handler(command);
-        }
-
-
-        [HttpGet]
-        [Authorize(Roles = "Admin")]
-        public GenericQueryResult GetOneReservation(MostrarReservaQuery query, [FromServices] MostrarReservaHandle handle)
-        {
-            return (GenericQueryResult)handle.Handler(query);
-        }
-
-
-
-        [HttpGet]
-        [Authorize(Roles = "Admin")]
-        public GenericQueryResult GetReservations(ListarReservasQuery query, [FromServices] ListarReservasHandle handle)
-        {
-            return (GenericQueryResult)handle.Handler(query);
-        }
-
+        
 
 
     }

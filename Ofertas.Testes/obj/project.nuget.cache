@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eow2A9t7gUZCjS0fLabuIGAWqSPXaDAOyOFVn4nfbjPN43Vk7kR2p6qJhb9HCZast1BSAnHDFDAzSu0aWWn/0Q==",
+  "dgSpecHash": "VL7kAY3e54iOvITbbSQLeBHRymAM/S/WXx+W99FiTjXlaH0yL1bZlQz8eyqiKuRU6yEJgHtfZoAFOaj83A5ICw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Ofertas.Testes\\Ofertas.Testes.csproj",
+  "projectFilePath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Ofertas\\Sales_Project\\Ofertas.Testes\\Ofertas.Testes.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Felipe\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",

@@ -8,6 +8,11 @@ namespace Ofertas.Dominio.Entidades
 {
     public class Produto : Base
     {
+        protected Produto()
+        {
+
+        }
+
         public Produto(string titulo, string imagem, string descricao, EnStatusPreco statusPreco, EnTipoProduto tipo, EnStatusReservaProduto statusReserva, int quantidade)
         {
 
@@ -48,7 +53,7 @@ namespace Ofertas.Dominio.Entidades
 
         public EnTipoProduto TipoProduto { get; private set; }
 
-        public EnStatusReservaProduto StatusReserva { get; set; }  // gambiarra por tirar o private? rs
+        public EnStatusReservaProduto StatusReserva { get; private set; }  // gambiarra por tirar o private? rs
 
         public int Quantidade { get; private set; }
 

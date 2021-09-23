@@ -18,15 +18,17 @@ namespace Ofertas.Api.Controllers
     
     public class ProdutoController : ControllerBase 
     {
-
+        
+        [Route("registerproduct")]
         [HttpPost]
         [Authorize(Roles = "Admin")]        
         public GenericCommandResult RegisterProduct(CadastrarProdutoCommand command, [FromServices] CadastrarProdutoHandle handle)
         {
             return (GenericCommandResult)handle.Handler(command);
-        }  
+        }
 
 
+        [Route("getallproducts")]
         [HttpGet]
         [Authorize]
         public GenericQueryResult GetAllProducts( [FromServices] ListarProdutosHandle handle)
@@ -44,7 +46,7 @@ namespace Ofertas.Api.Controllers
             return (GenericQueryResult)handle.Handler(query);
         }
 
-        
+        [Route("alterproduct")]
         [HttpPut]
         [Authorize(Roles = "Admin")]
         public GenericCommandResult ChangeProduct(AlterarProdutoCommand command, [FromServices] AlterarProdutoHandle handle)
@@ -52,7 +54,7 @@ namespace Ofertas.Api.Controllers
             return (GenericCommandResult)handle.Handler(command);
         }
 
-        
+        [Route("alterstatus")]
         [HttpPut]
         [Authorize(Roles = "Admin")]
         public GenericCommandResult ChangeStatus(AlterarStatusCommand command, [FromServices] AlterarStatusHandle handle)
@@ -61,14 +63,15 @@ namespace Ofertas.Api.Controllers
         }
 
 
+        [Route("getproduct")]
         [HttpGet]
         public GenericQueryResult GetProduct(BuscarProdutoQuery query, [FromServices] BuscarProdutoHandle handle)
         {
             return (GenericQueryResult)handle.Handler(query);
         }
 
-        
-        
+
+        [Route("deleteproduct")]
         [HttpDelete]
         public GenericCommandResult DeleteProduct(ExcluirProdutoCommand command, [FromServices] ExcluirProdutoHandle handle)
         {
