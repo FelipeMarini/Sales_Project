@@ -13,6 +13,11 @@ namespace Ofertas.Testes.Repositories
             
         }
 
+        public void AlterarStatusPreco(EnStatusPreco statusPreco)
+        {
+            
+        }
+
         public Produto BuscarProdutoPorDescricao(string descricao)
         {
             return null;  // faço isso para todos aqui quando há retorno?

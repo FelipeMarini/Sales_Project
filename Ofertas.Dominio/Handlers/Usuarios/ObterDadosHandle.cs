@@ -3,6 +3,8 @@ using Ofertas.Comum.Handlers.Contracts;
 using Ofertas.Comum.Queries;
 using Ofertas.Dominio.Queries.Usuario;
 using Ofertas.Dominio.Repositories;
+using System.Linq;
+using static Ofertas.Dominio.Queries.Usuario.ObterDadosQuery;
 
 namespace Ofertas.Dominio.Handlers.Usuarios
 {
@@ -22,11 +24,16 @@ namespace Ofertas.Dominio.Handlers.Usuarios
 
         public IQueryResult Handler(ObterDadosQuery query)
         {
-            var usuario = usuarioRepositorio.BuscarUsuarioPorId(query.IdBuscaUsuario);
 
-            var retornoUsuario = usuario.ToString();
+            var retornoUsuario = usuarioRepositorio.BuscarUsuarioPorId(query.IdBuscaUsuario);
+                
 
-            return new GenericQueryResult(true, "Usuário encontrado", retornoUsuario);
+            if (retornoUsuario == null)
+            {
+                return new GenericQueryResult(false, "Usuário não encontrado", null);
+            }
+          
+            return new GenericQueryResult(true, "Usuário encontrado", retornoUsuario );
         }
     
     

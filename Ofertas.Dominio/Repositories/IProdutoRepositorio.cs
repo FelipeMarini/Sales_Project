@@ -22,7 +22,14 @@ namespace Ofertas.Dominio.Repositories
         /// <param name="produto">dados atualizados do produto</param>
         void AlterarProduto(Produto produto);
 
-        
+
+        /// <summary>
+        /// Altera o status do preço de um produto existente, em oferta ou normal
+        /// </summary>
+        /// <param name="produto">status do preço do produto</param>
+        void AlterarStatusPreco(EnStatusPreco statusPreco);
+
+
         /// <summary>
         /// Busca um produto através do seu título
         /// </summary>

@@ -22,8 +22,15 @@ namespace Ofertas.Dominio.Repositories
         /// <param name="usuario">dados atualizados do usuário</param>
         void AlterarUsuario(Usuario usuario);
 
-        
-        
+
+        /// <summary>
+        /// Altera a senha do usuário
+        /// </summary>
+        /// <param name="senha">nova senha do usuário</param>
+        void AlterarSenha(string senha);
+
+
+
         /// <summary>
         /// Busca um usuário através do seu email
         /// </summary>

@@ -22,11 +22,14 @@ namespace Ofertas.Dominio.Handlers.Produtos
         public IQueryResult Handler(BuscarProdutoQuery query)
         {
 
-            var produto = produtoRepositorio.BuscarProdutoPorId(query.IdBuscaProduto);
+            var retornoProduto = produtoRepositorio.BuscarProdutoPorId(query.IdBuscaProduto);
 
-            var retornoProduto = produto.ToString(); 
+
+            if (retornoProduto == null)
+            {
+                return new GenericQueryResult(false,"Produto não encontrado",null);
+            }
             
-            // tirar dúvida com o Paulo de como mostrar o produto aqui da busca
 
             return new GenericQueryResult(true,"Produto encontrado",retornoProduto);
 

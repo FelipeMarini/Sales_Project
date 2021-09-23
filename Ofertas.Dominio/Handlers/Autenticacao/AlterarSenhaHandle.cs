@@ -18,6 +18,8 @@ namespace Ofertas.Dominio.Handlers.Autenticacao
 
         public ICommandResult Handler(AlterarSenhaCommand command)
         {
+            
+            
             // valida os dados em seu formato correto
             command.Validar();
 
@@ -25,17 +27,23 @@ namespace Ofertas.Dominio.Handlers.Autenticacao
             {
                 return new GenericCommandResult(false,"Dados de usuário informados corretamente",command.Notifications);
             }
+            
+             
 
             var usuario = usuarioRepositorio.BuscarUsuarioPorEmail(command.Email);
 
-            // verifica se a nova senha continua igual a anterior também?
-            if (usuario == null || command.Senha == usuario.Senha)
+
+            // verifica o email informado
+            if (usuario == null)
             {
-                return new GenericCommandResult(false,"Dados Inválidos",null);
+                return new GenericCommandResult(false,"Usuário não encontrado",null);
             }
 
 
-            return new GenericCommandResult(true,"Senha alterada com sucesso",usuario);
+            usuarioRepositorio.AlterarSenha(usuario.Senha);
+            
+
+            return new GenericCommandResult(true,"Senha alterada com sucesso","Sucesso");
 
         }
     

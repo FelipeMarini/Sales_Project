@@ -27,6 +27,14 @@ namespace Ofertas.InfraData.Repositories
             ctx.SaveChanges();
         }
 
+
+        public void AlterarStatusPreco(EnStatusPreco statusPreco)
+        {
+            ctx.Entry(statusPreco).State = EntityState.Modified;
+            ctx.SaveChanges();
+        }
+
+
         public Produto BuscarProdutoPorDescricao(string descricao)
         {
             return ctx.Produtos.FirstOrDefault(x => x.Descricao.ToLower() == descricao.ToLower());

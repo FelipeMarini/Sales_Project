@@ -8,7 +8,7 @@ namespace Ofertas.Dominio.Queries.ReservaProduto
     {
 
 
-        public Guid idUsuario { get; set; }
+        public Guid IdUsuario { get; set; }
 
 
         public void Validar()

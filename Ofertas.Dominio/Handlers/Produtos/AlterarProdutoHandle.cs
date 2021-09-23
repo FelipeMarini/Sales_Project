@@ -30,19 +30,16 @@ namespace Ofertas.Dominio.Handlers.Produtos
                 return new GenericCommandResult(false,"Dados incorretos do produto",command.Notifications);
             }
 
-            var p1 = produtoRepositorio.BuscarProdutoPorDescricao(command.Descricao);
+            
+            var produtoBuscado = produtoRepositorio.BuscarProdutoPorId(command.Produto.Id);
 
-            if (p1 == null)
+            if (produtoBuscado == null)
             {
                 return new GenericCommandResult(false, "Produto não encontrado", null);
             }
 
-            var p2 = produtoRepositorio.BuscarProdutoPorTitulo(command.Titulo);
 
-            if (p2 == null)
-            {
-                return new GenericCommandResult(false, "Produto não encontrado", null);
-            }
+            produtoRepositorio.AlterarProduto(command.Produto);
             
 
             return new GenericCommandResult(true,"Produto alterado com sucesso","Sucesso");

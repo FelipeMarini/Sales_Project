@@ -5,6 +5,7 @@ using Ofertas.Comum.Queries;
 using Ofertas.Dominio.Commands.ReservaProdutos;
 using Ofertas.Dominio.Handlers.ReservaProdutos;
 using Ofertas.Dominio.Queries.ReservaProduto;
+using System;
 
 namespace Ofertas.Api.Controllers
 {
@@ -22,12 +23,15 @@ namespace Ofertas.Api.Controllers
             return (GenericCommandResult)handle.Handler(command);
         }
 
-        
+
         [Route("getreservation")]
-        [HttpGet]
-        [Authorize(Roles = "Admin")]
-        public GenericQueryResult GetOneReservation(MostrarReservaQuery query, [FromServices] MostrarReservaHandle handle)
+        [HttpGet("{id}")]
+        [Authorize]
+        public GenericQueryResult GetReservation(Guid id, MostrarReservaQuery query, [FromServices] MostrarReservaHandle handle)
         {
+
+            query.IdUsuario = id;
+
             return (GenericQueryResult)handle.Handler(query);
         }
 

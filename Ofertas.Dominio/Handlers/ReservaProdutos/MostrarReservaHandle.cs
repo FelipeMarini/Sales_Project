@@ -22,7 +22,7 @@ namespace Ofertas.Dominio.Handlers.ReservaProdutos
         {
 
 
-            var retornoReserva = reservaRepositorio.MostrarReserva(query.idUsuario);
+            var retornoReserva = reservaRepositorio.MostrarReserva(query.IdUsuario);
 
 
             return new GenericQueryResult(true, "Reserva encontrada", retornoReserva);

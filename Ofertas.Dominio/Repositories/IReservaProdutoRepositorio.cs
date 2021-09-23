@@ -32,5 +32,21 @@ namespace Ofertas.Dominio.Repositories
         IReadOnlyCollection<ReservaProduto> ListarReservas(Guid idUsuario);
 
 
+        /// <summary>
+        /// Busca o produto através do seu id
+        /// </summary>
+        /// <param name="id">id do produto buscado</param>
+        /// <returns>Retorna o produto buscado pelo id</returns>
+        Produto BuscarProdutoPorId(Guid id);
+
+
+        /// <summary>
+        /// Busca o usuário através do seu id
+        /// </summary>
+        /// <param name="id">id do usuário buscado</param>
+        /// <returns>Retorna o usuário buscado</returns>
+        Usuario BuscarUsuarioPorId(Guid id);
+
+
     }
 }

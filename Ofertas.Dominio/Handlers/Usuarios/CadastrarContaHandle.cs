@@ -43,7 +43,7 @@ namespace Ofertas.Dominio.Handlers.Usuarios
             }
 
 
-            command.Senha = Senha.Criptografar(command.Senha);
+            //command.Senha = Senha.Criptografar(command.Senha);
 
             Usuario user = new Usuario(command.Nome, command.Email, command.Senha, command.TipoUsuario);
 

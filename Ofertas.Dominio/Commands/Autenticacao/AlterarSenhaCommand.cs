@@ -12,6 +12,7 @@ namespace Ofertas.Dominio.Commands.Autenticacao
             Senha = senha;
         }
 
+
         public string Email { get; set; }
 
         public string Senha { get; set; }
@@ -20,14 +21,15 @@ namespace Ofertas.Dominio.Commands.Autenticacao
         public void Validar()
         {
             AddNotifications(
-                
+
                 new Contract<Notification>()
                     .Requires()
-                    .IsEmail(Email,"Email","O formato de email está incorreto")
-                    .IsGreaterThan(Senha,7,"Senha","A senha precisa ter no mínimo 8 caracteres")
-                
+                    .IsEmail(Email, "Email", "O formato de email está incorreto")
+                    .IsGreaterThan(Senha, 7, "Senha", "A senha precisa ter no mínimo 8 caracteres")
             );
         }
     
+    
     }
+
 }

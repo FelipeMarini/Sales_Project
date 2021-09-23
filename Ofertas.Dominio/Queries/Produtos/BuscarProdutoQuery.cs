@@ -31,9 +31,11 @@ namespace Ofertas.Dominio.Queries.Produto
 
             public string Descricao { get; set; }
 
-            public bool TipoProduto { get; set; }
+            public EnTipoProduto TipoProduto { get; set; }
 
-            public EnStatusPreco? Status { get; set; }
+            public EnStatusPreco StatusPreco { get; set; }
+
+            public EnStatusReservaProduto StatusReserva { get; set; }
 
             public int Quantidade { get; set; }
         

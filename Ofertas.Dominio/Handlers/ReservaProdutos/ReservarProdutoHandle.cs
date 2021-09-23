@@ -30,34 +30,33 @@ namespace Ofertas.Dominio.Handlers.ReservaProdutos
                 return new GenericCommandResult(false,"Dados inválidos para reserva",command.Notifications);
             }
 
-            
-            Usuario usuario = new Usuario
-                (
-                    command.Usuario.Nome,
-                    command.Usuario.Email,
-                    command.Usuario.Senha,
-                    command.Usuario.TipoUsuario
-                );
 
-            
-            Produto produto = new Produto
-                (
-                    command.Produto.Titulo,
-                    command.Produto.Imagem,
-                    command.Produto.Descricao,
-                    command.Produto.StatusPreco,
-                    command.Produto.TipoProduto,
-                    command.Produto.StatusReserva,
-                    command.Produto.Quantidade
-                );
+            var usuario = reservaRepositorio.BuscarUsuarioPorId(command.IdUsuario);
+
+            if (usuario == null)
+            {
+                return new GenericCommandResult(false,"Usuário não encontrado",null);
+            }
+
+            var produto = reservaRepositorio.BuscarProdutoPorId(command.IdProduto);
+
+            if (produto == null)
+            {
+                return new GenericCommandResult(false, "Produto não encontrado", null);
+            }
+
+
 
             ReservaProduto reserva = new ReservaProduto
                 (
                     command.Quantidade,
-                    command.Usuario.Id,
-                    command.Produto.Id
+                    command.IdUsuario,
+                    command.IdProduto
                 );
 
+
+            reserva.IdUsuario = usuario.Id;
+            reserva.IdProduto = produto.Id; 
             
             var quantidade = command.Quantidade;
 

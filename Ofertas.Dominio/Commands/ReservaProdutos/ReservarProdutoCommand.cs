@@ -2,7 +2,7 @@
 using Flunt.Validations;
 using Ofertas.Comum.Commands;
 using Ofertas.Dominio.Entidades;
-
+using System;
 
 namespace Ofertas.Dominio.Commands.ReservaProdutos
 {
@@ -14,15 +14,18 @@ namespace Ofertas.Dominio.Commands.ReservaProdutos
 
         }
 
-        public ReservarProdutoCommand(int quantidade)
+        public ReservarProdutoCommand(Guid idUsuario, Guid idProduto, int quantidade)
         {
+            IdUsuario = idUsuario;
+            IdProduto = idProduto;
             Quantidade = quantidade;
+
         }       
 
        
-        public Usuario Usuario { get; set; }
+        public Guid IdUsuario { get; set; }
 
-        public Produto Produto { get; set; }
+        public Guid IdProduto { get; set; }
 
         public int Quantidade { get; set; }
 
@@ -34,8 +37,7 @@ namespace Ofertas.Dominio.Commands.ReservaProdutos
                 new Contract<Notification>()
                     .Requires()
                     .IsNotNull(Quantidade, "Quantidade", "Quantidade não pode ser nula")
-                    .IsNotNull(Usuario, "Usuário", "Usuário não pode ser nulo")
-                    .IsNotNull(Produto, "Produto", "Produto não pode ser nulo")
+         
             );
 
         }

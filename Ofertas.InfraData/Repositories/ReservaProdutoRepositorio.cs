@@ -33,8 +33,19 @@ namespace Ofertas.InfraData.Repositories
            return ctx.Reservas.FirstOrDefault(x => x.Id == idReserva);
         }
 
-        
-        
+
+        public Produto BuscarProdutoPorId(Guid id)
+        {
+            return ctx.Produtos.FirstOrDefault(x => x.Id == id);
+        }
+
+
+        public Usuario BuscarUsuarioPorId(Guid id)
+        {
+            return ctx.Usuarios.FirstOrDefault(x => x.Id == id);
+        }
+
+
         public void ReservarProduto(ReservaProduto reserva, Usuario usuario, Produto produto, int quantidade)
         {
             

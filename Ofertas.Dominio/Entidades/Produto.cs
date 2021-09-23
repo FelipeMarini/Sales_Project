@@ -59,6 +59,7 @@ namespace Ofertas.Dominio.Entidades
 
 
 
+        
         // lista de reservas associadas a um determinado produto
         public IReadOnlyCollection<ReservaProduto> Reservations { get { return _reservations.ToArray(); } }
 
@@ -66,34 +67,6 @@ namespace Ofertas.Dominio.Entidades
         // lista de reservas associadas a um determinado produto        
         private List<ReservaProduto> _reservations = new List<ReservaProduto>();
 
-
-
-        public void AtualizaProduto(string titulo, string imagem, string descricao, EnStatusPreco statusPreco, EnTipoProduto tipo, EnStatusReservaProduto statusReserva, int quantidade)
-        {
-            AddNotifications(
-                new Contract<Notification>()
-                    .Requires()
-                    .IsNotEmpty(titulo, "Título", "Título não pode ser vazio")
-                    .IsNotEmpty(imagem, "Imagem", "Imagem não pode ser vazia")
-                    .IsNotEmpty(descricao, "Descrição", "Descrição não pode ser vazia")
-                    .IsNotNull(statusPreco,"Status do Preço (Normal ou Oferta)","Status do preço não pode ser nulo")
-                    .IsNotNull(tipo,"Tipo de Produto","Tipo de produto (alimento/roupa) não pode ser nulo")
-                    .IsNotNull(statusReserva, "Status da Reserva do Produto (Livre ou Reservado)", "Status da reserva não pode ser nula")
-                    .IsNotNull(quantidade, "Quantidade", "Quantidade não pode ser nula")
-            );
-
-            if (IsValid)
-            {
-                Titulo = titulo;
-                Imagem = imagem;
-                Descricao = descricao;
-                StatusPreco = statusPreco;
-                TipoProduto = tipo;
-                StatusReserva = statusReserva;
-                Quantidade = quantidade;
-            }
-
-        }
        
 
 

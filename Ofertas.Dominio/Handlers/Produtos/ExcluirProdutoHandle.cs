@@ -29,19 +29,7 @@ namespace Ofertas.Dominio.Handlers.Produtos
             }
 
             
-            Produto produto = new Produto
-                (
-                    command.Titulo,
-                    command.Imagem,
-                    command.Descricao,
-                    command.StatusPreco,
-                    command.TipoProduto,
-                    command.StatusReserva,
-                    command.Quantidade
-                );
-
-            
-            produtoRepositorio.ExcluirProduto(produto.Id);
+            produtoRepositorio.ExcluirProduto(command.IdProduto);
 
             
             return new GenericCommandResult(true,"Produto excluído com sucesso","Sucesso");

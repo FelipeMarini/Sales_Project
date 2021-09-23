@@ -11,6 +11,7 @@ using Ofertas.Dominio.Handlers.Usuarios;
 using Ofertas.Dominio.Queries.Usuario;
 using System;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Security.Claims;
 using System.Text;
 
@@ -79,6 +80,7 @@ namespace Ofertas.Api.Controllers
 
         }
 
+        
         [Route("changepwd")]
         [HttpPut]
         [Authorize]
@@ -88,6 +90,7 @@ namespace Ofertas.Api.Controllers
         }
 
 
+        
         [Route("recoverpwd")]
         [HttpGet]
         [Authorize]
@@ -97,6 +100,7 @@ namespace Ofertas.Api.Controllers
         }
 
         
+        
         [Route("deleteuser")]
         [HttpDelete]
         [Authorize(Roles ="Admin")]
@@ -105,6 +109,8 @@ namespace Ofertas.Api.Controllers
             return (GenericCommandResult)handle.Handler(command);
         }
 
+        
+        
         [Route("getusers")]
         [HttpGet]
         [Authorize(Roles = "Admin")]
@@ -115,16 +121,20 @@ namespace Ofertas.Api.Controllers
 
         
         [Route("getuser")]
-        [HttpGet]
+        [HttpGet("{id}")]
         [Authorize]
-        public GenericQueryResult GetUser(ObterDadosQuery query, [FromServices] ObterDadosHandle handle)
+        public GenericQueryResult GetUser(Guid id, ObterDadosQuery query, [FromServices] ObterDadosHandle handle)
         {
-            return (GenericQueryResult)handle.Handler(query);
-        }
 
+            query.IdBuscaUsuario = id;
+
+            return (GenericQueryResult)handle.Handler(query);
+        
+        }
 
         
 
-
     }
+
+
 }

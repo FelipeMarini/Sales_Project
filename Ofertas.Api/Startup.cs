@@ -99,7 +99,6 @@ namespace Ofertas.Api
             #region Produtos
             services.AddTransient<IProdutoRepositorio,ProdutoRepositorio>();            
             services.AddTransient<AlterarProdutoHandle,AlterarProdutoHandle>();
-            services.AddTransient<AlterarStatusHandle,AlterarStatusHandle>();
             services.AddTransient<BuscarProdutoHandle,BuscarProdutoHandle>();
             services.AddTransient<CadastrarProdutoHandle,CadastrarProdutoHandle>();
             services.AddTransient<ExcluirProdutoHandle,ExcluirProdutoHandle>();

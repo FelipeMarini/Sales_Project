@@ -37,10 +37,10 @@ namespace Ofertas.Dominio.Handlers.Autenticacao
 
             
             // mensagem "Dados Inválidos" genérico para não fornecer pistas para um possível hacker/invasor
-            if (!Senha.ValidarHash(command.Senha,usuario.Senha))
-            {
-                return new GenericCommandResult(false, "Dados Inválidos", null);
-            }
+            //if (!Senha.ValidarHash(command.Senha,usuario.Senha))
+            //{
+            //    return new GenericCommandResult(false, "Dados Inválidos", null);
+            //}
 
             // o método de logar será executado no controller?
 

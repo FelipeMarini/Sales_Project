@@ -29,7 +29,14 @@ namespace Ofertas.InfraData.Repositories
         }
 
         
-        
+        public void AlterarSenha(string senha)
+        {
+            ctx.Entry(senha).State = EntityState.Modified;
+            ctx.SaveChanges();
+        }
+
+
+
         public Usuario BuscarUsuarioPorEmail(string email)
         {
             return ctx.Usuarios.FirstOrDefault(x => x.Email.ToLower() == email.ToLower());

@@ -7,6 +7,7 @@ using Ofertas.Comum.Queries;
 using Ofertas.Dominio.Commands.Produtos;
 using Ofertas.Dominio.Handlers.Produtos;
 using Ofertas.Dominio.Queries.Produto;
+using System;
 using System.Linq;
 using System.Security.Claims;
 
@@ -54,19 +55,15 @@ namespace Ofertas.Api.Controllers
             return (GenericCommandResult)handle.Handler(command);
         }
 
-        [Route("alterstatus")]
-        [HttpPut]
-        [Authorize(Roles = "Admin")]
-        public GenericCommandResult ChangeStatus(AlterarStatusCommand command, [FromServices] AlterarStatusHandle handle)
-        {
-            return (GenericCommandResult)handle.Handler(command);
-        }
-
+        
 
         [Route("getproduct")]
-        [HttpGet]
-        public GenericQueryResult GetProduct(BuscarProdutoQuery query, [FromServices] BuscarProdutoHandle handle)
+        [HttpGet("{id}")]
+        public GenericQueryResult GetProduct(Guid id, BuscarProdutoQuery query, [FromServices] BuscarProdutoHandle handle)
         {
+
+            query.IdBuscaProduto = id;
+
             return (GenericQueryResult)handle.Handler(query);
         }
 
